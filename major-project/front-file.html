@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Weather</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.2/chart.min.js"></script>
+
+ <link rel="stylesheet" href="majors.css">
+</head>
+<body >
+   <div class="container">
+    <video  autoplay muted loop id="myVideo">
+        <source  src="sunny.mp4" type="video/mp4">
+    </video>
+    <div class="mbody">
+        <div class="search">
+            <div class="heading">WEATHER.S</div>
+            <div class="mainsearch">
+                <input type="search" placeholder="Enter!!" id="search-input" required autocomplete="off">
+                <button id="search-button" onclick="GetInfo()" >Search</button>
+                
+            </div>
+        </div>
+        <div class="weathers">
+            <div id="location">
+                <p>--------</p>
+            </div>
+            <div id="temp"> 
+                <!-- <div class="date"></div>
+                <div class="time"></div> -->
+            </div>
+            <div class="all1">
+            <div class="all"> 
+                <div class="val">
+                Temp :<span id="temp-value">-------</span > <span id="temp-unit">&#176c</span>
+            </div>
+             <div class="climates">
+                climate :<span id="climate">--------</span>
+            </div>
+        </div>
+        <div class="all"> 
+           <div class="wind">
+            W-speed: <span id="spd">------</span><span> m/s</span>
+            </div>
+            <div class="hmd">
+                Humidity:  <span id="hmdy">------</span> <span> g/m3</span>
+            </div>
+        </div>
+    </div>
+
+            
+        </div>
+        <div class="laterToday">
+            <!-- <div id="iconsContainer">     -->
+                <div class="allicons">
+                <div class = "icons" style="margin-left: 1em ;">
+                    <p class="weather" id="day1" ></p>
+                    <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                    <div class="al">
+                        <p class="mn">min :</p>  
+                        <p class="minValues" id="day1Min">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">max :</p>  
+                        <p class="maxValues" id="day1Max">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">speed :</p>  
+                        <p class="minspeed" id="speeds1">loading...</p>
+                        <p class="dot">m/s</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">humidity :</p>  
+                        <p class="minhmdy" id="humidity1">loading...</p>
+                        <p class="dot">g/m3</p>
+                    </div>
+                </div>
+            </div>
+                <div class="allicons">
+                <div class = "icons">
+                    <p class="weather" id="day2"></p>
+                    <div class="image"><img src="dots.png" class="imgClass" id="img2"></div>
+                    <div class="al">
+                        <p class="mn">min :</p>  
+                        <p class="minValues" id="day2Min">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">max :</p>  
+                        <p class="maxValues" id="day2Max">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">speed :</p>  
+                        <p class="minspeed" id="speeds2">loading...</p>
+                        <p class="dot">m/s</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">humidity :</p>  
+                        <p class="minhmdy" id="humidity2">loading...</p>
+                        <p class="dot">g/m3</p>
+                    </div>
+                </div>
+                </div>
+            <div class="allicons">
+                <div class = "icons">
+                    <p class="weather" id="day3"></p>
+                    <div class="image"><img src="dots.png" class="imgClass" id="img3"></div>
+                    <div class="al">
+                        <p class="mn">min :</p>  
+                        <p class="minValues" id="day3Min">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">max :</p>  
+                        <p class="maxValues" id="day3Max">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">speed :</p>  
+                        <p class="minspeed" id="speeds3">loading...</p>
+                        <p class="dot">m/s</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">humidity :</p>  
+                        <p class="minhmdy" id="humidity3">loading...</p>
+                        <p class="dot">g/m3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="allicons">
+            
+                <div class = "icons">
+                    <p class="weather" id="day4"></p>
+                    <div class="image"><img src="dots.png" class="imgClass" id="img4"></div>
+                    <div class="al">
+                        <p class="mn">min :</p>  
+                        <p class="minValues" id="day4Min">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">max :</p>  
+                        <p class="maxValues" id="day4Max">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">speed :</p>  
+                        <p class="minspeed" id="speeds4">loading...</p>
+                        <p class="dot">m/s</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">humidity :</p>  
+                        <p class="minhmdy" id="humidity4">loading...</p>
+                        <p class="dot">g/m3</p>
+                    </div>
+                </div>
+            </div>
+                <div class="allicons">
+                <div class = "icons">
+                    <p class="weather" id="day5"></p>
+                    <div class="image"><img src="dots.png" class="imgClass" id="img5"></div>
+                    <div class="al">
+                        <p class="mn">min :</p>  
+                        <p class="minValues" id="day5Min">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">max :</p>  
+                        <p class="maxValues" id="day5Max">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">speed :</p>  
+                        <p class="minspeed" id="speeds5">loading...</p>
+                        <p class="dot">m/s</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">humidity :</p>  
+                        <p class="minhmdy" id="humidity5">loading...</p>
+                        <p class="dot">g/m3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="allicons">
+            <div class = "icons">
+                    <div class="holder">
+                    <p class="weather" id="day6"></p>
+                    <div class="image"><img src="dots.png" class="imgClass" id="img6"></div>
+                    <div class="al">
+                        <p class="mn">min :</p>  
+                        <p class="minValues" id="day6Min">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">max :</p>  
+                        <p class="maxValues" id="day6Max">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">speed :</p>  
+                        <p class="minspeed" id="speeds6">loading...</p>
+                        <p class="dot">m/s</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">humidity :</p>  
+                        <p class="minhmdy" id="humidity6">loading...</p>
+                        <p class="dot">g/m3</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+                <div class="allicons">
+
+                <div class = "icons">
+                    <p class="weather" id="day7"></p>
+                    <div class="image"><img src="dots.png" class="imgClass" id="img7"></div>
+                    <div class="al">
+                        <p class="mn">min :</p>  
+                        <p class="minValues" id="day7Min">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">max :</p>  
+                        <p class="maxValues" id="day7Max">Loading...</p>
+                        <p class="dot">°</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">speed :</p>  
+                        <p class="minspeed" id="speeds7">loading...</p>
+                        <p class="dot">m/s</p>
+                    </div>
+                    <div class="al">
+                        <p class="mn">humidity :</p>  
+                        <p class="minhmdy" id="humidity7">loading...</p>
+                        <p class="dot">g/m3</p>
+                    </div>
+                </div>
+                                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    <div class="chart">
+        <div class="barchart">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="detail">
+            <div class="btns">
+            <button type="submit" id="subdet" onclick="updateValue()">Reload / Refresh</button>
+        </div>
+            <!-- <button id="search-map" onclick="getCharts()" >Searchmap</button> -->
+            <div class="infos">
+                <div class="det">
+                    max temp: <div id="mx"></div>
+                </div>
+                <div class="det">
+                    min temp : <div id="mt"></div>
+                </div>
+                <div class="det">
+                    max speed : <div id="sx"></div>
+                </div>
+                <div class="det">
+                    max humidity : <div id="hdt"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    <!-- <div class="footer">
+        <p class="foots">Designed by Manas Goyal</p>
+    </div>
+</div> -->
+   <script src="main2.js"></script>
+   <script src="major.js"></script>
+   <!-- <script src="chart.js"></script> -->
+   <!-- <script src="charts.js"></script> -->
+</body>
+</html>

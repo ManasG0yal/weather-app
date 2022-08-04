@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    
+    /* height: 150vh; */
+}
+.mbody  {
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+.search{
+    background: transparent;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2vh;
+}
+.heading{
+    margin-left:5vh;
+    font-size: 8vh;
+    font-weight: 800;
+    color: white;
+    font-family: 'Arvo', serif;
+}
+.mainsearch{
+    width: 30vw;
+    margin-right: 10vh;
+    display: flex;
+
+}
+input{
+    width: 20vw;
+    height: 6vh;
+    border-radius: 0.5em 0em  0.5em 0em;
+    margin-right: 1em;
+}
+input:focus {
+outline: none !important;
+}
+button{
+    height: 6vh;
+    width: 7vw;
+    border-radius: 0.5em;
+}
+#search-input{
+    font-size: 1.2em;
+    font-family: 'Arvo', serif;
+}
+.weathers{
+    background: transparent;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    color: rgb(143, 140, 140);
+    /* color: rgb(231, 231, 231); */
+}
+.laterToday{
+    background-color: aliceblue;
+    width: 100vw;
+    height: 20vh;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top : 2em;
+    height: 50vh;
+
+}
+.footer{
+    background: orange;
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    /* position: fixed; */
+    bottom: 0;
+    justify-content: right;
+    align-items: center;
+}
+.foots{
+    margin-right: 1.5rem;
+    font-size: 3vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#location{
+    font-size: 12vh;
+    font-family: 'Edu QLD Beginner', cursive;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1vh;
+    /* margin-left: 1.5em; */
+    display: flex;
+    
+
+}
+#temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10vh;
+}
+img{
+    height: 5vh;
+    width: 7em;
+}
+.all{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 3em ;
+    font-family: 'Edu QLD Beginner', cursive;
+    font-family: 'Montserrat', sans-serif;
+
+}
+video{
+    position: fixed;
+}
+.mbody .footer{
+    z-index: 10;
+}
+div{
+    z-index: 10;
+}
+.icons   .allicons{
+    height: 30vh;
+    width: 20vw;
+    margin-right: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.allicons:hover{
+    box-shadow: 5px  7px  9px rgb(78, 78, 78) ;
+}
+.chart{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+}
+.imgclass{
+    height: 25em;
+}
+canvas{
+    z-index: 10;
+    height: 35vh;
+    width: 80vh;
+    /* background-color: rgb(255, 255, 255); */
+}
+.al{
+    display: flex;
+    flex-direction: row;
+}
+.barchart{
+    height: 40vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+}
+.detail{
+    width: 50vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.076)
+
+}
+.all1{
+    display: flex;
+    flex-direction: column;
+}
+span{
+    color: orange;
+}
+#location{
+    text-transform: uppercase;
+}
+img{
+    height: 15vh;
+}
+#subdet{
+    width: 100%;
+    height: 8vh;
+    margin-top: 1em;
+}
+html{
+    scroll-behavior: smooth;
+}
+.det{
+    display: flex;
+    font-size: 2em;
+    margin: 0.1em 0em 0.5em 0.5em ;
+    color: white;
+}
+#mx , #mt ,   #sx , #hdt{
+    color: orange;
+}
+.allicons{
+    margin-right: 1.5vw;
+    height: 30vh;
+    /* width: 35vw; */
+    background-color: rgba(155, 155, 155, 0.28);
+    box-shadow: 3px  5px  7px rgb(136, 135, 135) ;
+}
+.detail2{
+    display: flex;
+    flex-direction: column;
+}
+.infos{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width:61.5625rem) {
+    .chart{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .barchart{
+        width: 100%;
+        height: 5em;
+    }
+
+
+
+
