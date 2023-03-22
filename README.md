@@ -1,4 +1,4 @@
-# teachnook-major-project
+
 this is the major project given by teachnook 
 the project is on the "weather project"
 
